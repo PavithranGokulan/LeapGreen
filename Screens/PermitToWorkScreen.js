@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SafeAreaView, Text, TextInput, TouchableOpacity, StyleSheet, View, Image, Alert } from 'react-native';
-import Lgelogo from './Lgelogo';
+import Lgelogo from '../Lgelogo';
 
 export default function PermitToWorkScreen({ navigation }) {
   // State to track the input values
@@ -19,11 +19,9 @@ export default function PermitToWorkScreen({ navigation }) {
     setForm({ ...form, [field]: value });
   };
 
-  // Function to handle the "Next" button press
   const handleNext = () => {
-    // Check if all fields are filled
     if (Object.values(form).every(value => value.trim())) {
-      navigation.navigate('Permitlist'); // Navigate to the Checklist screen
+      navigation.navigate('Permitlist', { formData: form });
     } else {
       Alert.alert('Error', 'Please fill in all fields before proceeding.');
     }

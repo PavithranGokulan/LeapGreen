@@ -1,0 +1,78 @@
+{
+    "sections": {
+      "Safety Rules (Nacelle)": [
+        { "id": "1", "title": "Locking of Rotor", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "2", "title": "When to Lock the Rotor", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "3", "title": "Locking of a Single Blade", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "4", "title": "When to Lock a Single Blade", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "5", "title": "Hearing Protection", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "6", "title": "Activation of Contractors", "status": "", "remarks": "", "updatedRemarks": "" }
+      ],
+      "General Rules at Service Check (Nacelle)": [
+        { "id": "1", "title": "Tightening Torque Rules for V47-500/600 kW", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "2", "title": "Lubrication Rules and General check for V47-500/600 KW", "status": "", "remarks": "", "updatedRemarks": "" }
+      ],
+      "Documents Used at Service Check (Nacelle)": [
+        { "id": "1", "title": "RRB - Check List and Instruction", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "2", "title": "RRB - Lubrication Chart", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "3", "title": "RRB - Torque Settings", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "4", "title": "RRB - Bolt Connections", "status": "", "remarks": "", "updatedRemarks": "" }
+      ],
+      "Fall Protection System (Nacelle)": [
+        { "id": "1", "title": "Check presence of anchor point for wire rope in top and bottom of tower", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "2", "title": "Check condition of wire Shackles and shackle lock (No loose, rust free)", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "3", "title": "Check smooth sliding of wire guides on the ladder. Check tightness of all bolt connections.", "status": "", "remarks": "", "updatedRemarks": "" }
+      ],
+      "Anchor Points (Nacelle)": [
+        { "id": "1", "title": "Check proper tightness of anchor point for wire rope in top and bottom of tower", "status": "", "remarks": "", "updatedRemarks": "" }
+      ],
+      "Nose Cone (Nacelle)": [
+        { "id": "1", "title": "Check bolts at nose cone support for proper tightness. (M20 Torque 477 NM)", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "2", "title": "Check tightness of bolts available in nose cone. (M8 bolts 20 NM)", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "3", "title": "Check nose cone for no cracks.", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "4", "title": "Check welding joints properly on nose cone support. No rust or No cracks", "status": "", "remarks": "", "updatedRemarks": "" }
+      ],
+      "Blades (Nacelle)": [
+        { "id": "1", "title": "Inspect the blades 1 Free from dirty", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "2", "title": "Inspect the blades 2 Free from dirty", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "3", "title": "Inspect the blades 3 Free from dirty", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "4", "title": "Check every 3rd of the 60 M20 bolts for blade and blade bearing (Torque 320 NM - Annual)", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "5", "title": "Check every 10th of the 60 M20 bolts for blade and blade bearing (Torque 320 NM - Half Yearly)", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "6", "title": "Check for no cracks throughout the blade please mention blade No (if any)", "status": "", "remarks": "", "updatedRemarks": "" }
+      ],
+      "Hub and Blade Bearing (Nacelle)": [
+        { "id": "1", "title": "Check every 3rd of the 60 M20 bolts for BLADE 1 bearing and hub (Torque 320 NM - Annual)", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "2", "title": "Check every 3rd of the 60 M20 bolts for BLADE 2 bearing and hub (Torque 320 NM - Annual)", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "3", "title": "Check every 3rd of the 60 M20 bolts for BLADE 3 bearing and hub (Torque 320 NM - Annual)", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "4", "title": "Check every 10th of the 60 M20 bolts for BLADE 1 bearing and hub (Torque 320 NM - Half Yearly)", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "5", "title": "Check every 10th of the 60 M20 bolts for BLADE 2 bearing and hub (Torque 320 NM - Half Yearly)", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "6", "title": "Check every 10th of the 60 M20 bolts for BLADE 3 bearing and hub (Torque 320 NM - Half Yearly)", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "7", "title": "Lubricate blade -1 bearing. Lubricate bearing / 400 Gms (Rhodina BBZ /LGBB2/Mobil SHC 460)", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "8", "title": "Lubricate blade -2 bearing. Lubricate /bearing 400 Gms (Rhodina BBZ/LGBB2/Mobil SHC 460)", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "9", "title": "Lubricate blade -3 bearing. Lubricate /bearing 400 Gms (Rhodina BBZ/LGBB2/Mobil SHC 460)", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "10", "title": "Check Lip seal condition and check for no grease leakage - BLADE 1", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "11", "title": "Check Lip seal condition and check for no grease leakage - BLADE 2", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "12", "title": "Check Lip seal condition and check for no grease leakage - BLADE 3", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "13", "title": "Lubricate traverse holder front bushing and traverse holder. ( SKF LGWM1 - 100 Gms)", "status": "", "remarks": "", "updatedRemarks": "" }
+      ],
+      "Main Bearing Housing (Nacelle)": [
+        { "id": "1", "title": "Check lip seal for no leakage in bearing - FRONT", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "2", "title": "Check lip seal for no leakage in bearing - REAR", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "3", "title": "Check availability of Grease collecting Tray - FRONT", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "4", "title": "Check availability of Grease collecting Tray - REAR", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "5", "title": "Collect Main bearing Grease samples - FRONT", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "6", "title": "Collect Main bearing Grease samples - REAR", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "7", "title": "Lubricate Bearing - SKF LGWM1 Grease / Kluberplex BEM 41-141 (400 Gms / bearing) ( Ensure RPM should be 200 to 300) - FRONT", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "8", "title": "Lubricate Bearing - SKF LGWM1 Grease / Kluberplex BEM 41-141 (400 Gms / bearing) ( Ensure RPM should be 200 to 300) - REAR", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "9", "title": "Check for vibration / abnormality observed from bearing - FRONT", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "10", "title": "Check for vibration / abnormality observed from bearing - REAR", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "11", "title": "Check availability of Main bearing cover - FRONT", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "12", "title": "Check availability of Main bearing cover - REAR", "status": "", "remarks": "", "updatedRemarks": "" }
+      ],
+      "Soft Braking (Nacelle)": [
+        { "id": "1", "title": "Check healthiness of Batteries (Replace voltage below 8 Volt )", "status": "", "remarks": "", "updatedRemarks": "" },
+        { "id": "2", "title": "Check charger working condition, output :27.1 V DC", "status": "", "remarks": "", "updatedRemarks": "" }
+      ]
+    }
+  }
+  

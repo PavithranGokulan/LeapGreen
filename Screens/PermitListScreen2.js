@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { SafeAreaView, Text, TouchableOpacity, StyleSheet, View, Alert } from 'react-native';
 import CheckBox from 'expo-checkbox';
-import { db } from './firebase'; // Import Firebase configuration
+import { db } from '../firebase'; // Import Firebase configuration
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore'; // Import Firestore methods
-import Lgelogo from './Lgelogo';
+import Lgelogo from '../Lgelogo';
 
-export default function PermitListScreen2({ navigation }) {
+export default function PermitListScreen2({ route, navigation }) {
+  const { formData, checklistData } = route.params; // Get the formData and checklistData from the route parameters
+
   const [checklist, setChecklist] = useState({
     electricalSupply: false,
     rotorLock: false,
@@ -24,28 +26,30 @@ export default function PermitListScreen2({ navigation }) {
 
   const handleSubmit = async () => {
     try {
-      // Reference to Firestore collection
-      const checklistRef = collection(db, 'permitlist'); // Use your desired collection name
-
-      // Add a new document with a generated ID
+      const checklistRef = collection(db, 'permitlist'); 
+  
       await addDoc(checklistRef, {
-        ...checklist, // Spread the checklist state
-        timestamp: serverTimestamp(), // Use server timestamp
+        ...formData, // Spread the form data from PermitToWorkScreen
+        ...checklistData, // Spread the checklist data from PermitListScreen
+        ...checklist, // Spread the checklist data from PermitListScreen2
+        timestamp: serverTimestamp(),
       });
-
-      // Confirmation message
-      Alert.alert('Success', 'Form submitted and stored in Firebase successfully!');
-
-      // Optionally, navigate to another screen
-      // navigation.navigate('AnotherScreen');
+  
+      Alert.alert(
+        'Success', 
+        'Form submitted and stored in Firebase successfully!',
+        [
+          { text: 'OK', onPress: () => navigation.navigate('PermitAuthenticateScreen') }, // Navigate on "OK"
+        ]
+      );
     } catch (error) {
       Alert.alert('Error', 'There was an issue submitting the form: ' + error.message);
     }
   };
+  
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* Header Section - Logo and Title */}
       <Lgelogo />
 
       <Text style={styles.headerText}>Permit to Work</Text>
