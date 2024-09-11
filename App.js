@@ -7,6 +7,9 @@ import PermitListScreen2 from './Screens/PermitListScreen2';
 import PermitAuthenticateScreen from './Screens/PermitAuthenticateScreen';
 import ChecklistSection from './Screens/ChecklistSection';
 import ChecklistScreen from './Screens/ChecklistScreen';
+import LoginEmployeeScreen from './Screens/LoginEmployeeScreen';
+import LoginManagerScreen from './Screens/LoginManagerScreen';
+import PermitManagerScreen from './Screens/PermitManagerScreen';
 import VerifyTeamScreen from './Screens/VerifyTeamScreen';
 
 const Stack = createStackNavigator();
@@ -14,7 +17,22 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="PermitAuthenticateScreen">
+      <Stack.Navigator initialRouteName="LoginEmployeeScreen">
+        <Stack.Screen
+        name="LoginEmployeeScreen"
+        component={LoginEmployeeScreen}
+        options={{headerShown: false}}
+        />
+        <Stack.Screen
+        name="LoginManagerScreen"
+        component={LoginManagerScreen}
+        options={{headerShown: false}}
+        />
+        <Stack.Screen
+        name="PermitManagerScreen"
+        component={PermitManagerScreen}
+        options={{headerShown: false}}
+        />
         <Stack.Screen
         name="PermitAuthenticateScreen"
         component={PermitAuthenticateScreen}
