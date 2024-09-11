@@ -35,17 +35,17 @@ export default function PermitListScreen2({ route, navigation }) {
         timestamp: serverTimestamp(),
       });
   
-      Alert.alert(
-        'Success', 
-        'Form submitted and stored in Firebase successfully!',
-        [
-          { text: 'OK', onPress: () => navigation.navigate('PermitAuthenticateScreen') }, // Navigate on "OK"
-        ]
-      );
+      // Pass the data to VerifyTeamScreen
+      navigation.navigate('Verifyteam', {
+        formData,           // Pass the form data
+        checklistData,      // Pass the checklist data
+        checklist,          // Pass the current checklist data
+      });
     } catch (error) {
       Alert.alert('Error', 'There was an issue submitting the form: ' + error.message);
     }
   };
+  
   
 
   return (
@@ -110,7 +110,7 @@ export default function PermitListScreen2({ route, navigation }) {
 
       {/* Submit Button */}
       <TouchableOpacity style={styles.button} onPress={handleSubmit}>
-        <Text style={styles.buttonText}>Submit</Text>
+        <Text style={styles.buttonText}>Verify</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );

@@ -10,6 +10,7 @@ import ChecklistScreen from './Screens/ChecklistScreen';
 import LoginEmployeeScreen from './Screens/LoginEmployeeScreen';
 import LoginManagerScreen from './Screens/LoginManagerScreen';
 import PermitManagerScreen from './Screens/PermitManagerScreen';
+import VerifyTeamScreen from './Screens/VerifyTeamScreen';
 
 const Stack = createStackNavigator();
 
@@ -51,6 +52,11 @@ export default function App() {
           name="Permitlist2"
           component={PermitListScreen2}
           options={{ headerShown: false }} // Hide the default header
+        />
+        <Stack.Screen
+        name="Verifyteam"
+        component={VerifyTeamScreen}
+        options={{headerShown: false}}
         />
         <Stack.Screen
         name='ChecklistSection'

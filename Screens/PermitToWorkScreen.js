@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
 import { SafeAreaView, Text, TextInput, TouchableOpacity, StyleSheet, View, Image, Alert } from 'react-native';
 import Lgelogo from '../Lgelogo';
+import CheckBox from 'expo-checkbox'; 
 
 export default function PermitToWorkScreen({ navigation }) {
   // State to track the input values
   const [form, setForm] = useState({
-    site: '',
-    location: '',
-    workArea: '',
-    windSpeed: '',
     name: '',
     numberOfPersons: '',
     descriptionOfWork: '',
+    site: '',
+    model: '',
+    location: '',
+    workArea: '',
+    windSpeed: '',
   });
+
+  // State to track the "Yes" or "No" selection
+  const [windSpeedChecked, setWindSpeedChecked] = useState(null);
 
   // Function to handle input changes
   const handleInputChange = (field, value) => {
@@ -37,11 +42,39 @@ export default function PermitToWorkScreen({ navigation }) {
 
       {/* Input Fields */}
       <TextInput
+        placeholder="Name"
+        placeholderTextColor="#A3D59B"
+        style={styles.input}
+        value={form.name}
+        onChangeText={(text) => handleInputChange('name', text)}
+      />
+      <TextInput
+        placeholder="No. of Persons"
+        placeholderTextColor="#A3D59B"
+        style={styles.input}
+        value={form.numberOfPersons}
+        onChangeText={(text) => handleInputChange('numberOfPersons', text)}
+      />
+      <TextInput
+        placeholder="Description of Work"
+        placeholderTextColor="#A3D59B"
+        style={styles.input}
+        value={form.descriptionOfWork}
+        onChangeText={(text) => handleInputChange('descriptionOfWork', text)}
+      />
+      <TextInput
         placeholder="Site"
         placeholderTextColor="#A3D59B"
         style={styles.input}
         value={form.site}
         onChangeText={(text) => handleInputChange('site', text)}
+      />
+      <TextInput
+      placeholder='Model'
+      placeholderTextColor="#A3D59B"
+      style={styles.input}
+      value={form.model }
+      onChangeText={(text) => handleInputChange('model', text)}
       />
       <TextInput
         placeholder="Location"
@@ -64,27 +97,26 @@ export default function PermitToWorkScreen({ navigation }) {
         value={form.windSpeed}
         onChangeText={(text) => handleInputChange('windSpeed', text)}
       />
-      <TextInput
-        placeholder="Name"
-        placeholderTextColor="#A3D59B"
-        style={styles.input}
-        value={form.name}
-        onChangeText={(text) => handleInputChange('name', text)}
-      />
-      <TextInput
-        placeholder="No. of Persons"
-        placeholderTextColor="#A3D59B"
-        style={styles.input}
-        value={form.numberOfPersons}
-        onChangeText={(text) => handleInputChange('numberOfPersons', text)}
-      />
-      <TextInput
-        placeholder="Description of Work"
-        placeholderTextColor="#A3D59B"
-        style={styles.input}
-        value={form.descriptionOfWork}
-        onChangeText={(text) => handleInputChange('descriptionOfWork', text)}
-      />
+      {/* Yes or No Selection */}
+      <View style={styles.selectionContainer}>
+        <Text style={styles.selectionLabel}>A safeWork Method Statement (SWMS), Job Safety Analysis (JSA) and/or Safe Work Procedure (SWP) has been provided and is attached to this
+        work permit?</Text>
+        <View style={styles.buttonGroup}>
+        <TouchableOpacity
+          style={[styles.optionButton, windSpeedChecked === 'Yes' && styles.selectedButton]}
+          onPress={() => setWindSpeedChecked('Yes')}
+        >
+          <Text style={styles.optionText}>Yes</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.optionButton, windSpeedChecked === 'No' && styles.selectedButton]}
+          onPress={() => setWindSpeedChecked('No')}
+        >
+          <Text style={styles.optionText}>No</Text>
+        </TouchableOpacity>
+
+        </View>
+      </View>
 
       {/* Next Button */}
       <TouchableOpacity 
@@ -119,6 +151,33 @@ const styles = StyleSheet.create({
     color: '#000',
     marginBottom: 20,
     paddingVertical: 1,
+  },
+  optionButton: {
+    borderWidth: 1,
+    borderColor: '#66C05D',
+    borderRadius: 5,
+    paddingVertical: 7,
+    paddingHorizontal: 10,
+    marginTop:10,
+    marginHorizontal: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+    Width: 30,
+  },
+  optionText:{
+    color: '#000',
+  },
+  selectionLabel:{
+    fontWeight: '500',
+    color: '#66C05D',
+    textAlign: 'justify',
+  },
+  selectedButton: {
+    backgroundColor: '#66C05D',
+  },
+  buttonGroup: {
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
   button: {
     backgroundColor: '#66C05D',
