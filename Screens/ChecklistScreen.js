@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Switch, Button, FlatList, StyleSheet, Alert, Image } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SafeAreaView } from 'react-native-safe-area-context';
-
+// import Example from '../Example';
 const checklists = require('../Datas/checklists.json');
 
 const ChecklistScreen = ({ route, navigation }) => {
@@ -45,7 +45,9 @@ const ChecklistScreen = ({ route, navigation }) => {
   const validateAndSaveSection = async () => {
     const isValid = checklistData.every(item => 
       item.status.trim() !== '' &&
-      (item.status !== 'Other' || item.otherStatus.trim() !== '')
+      (item.status !== 'Other' || item.otherStatus.trim() !== '')&&
+      item.remarks.trim() !== '' &&
+      item.updatedRemarks.trim() !== ''
     );
 
     if (!isValid) {
@@ -56,6 +58,7 @@ const ChecklistScreen = ({ route, navigation }) => {
 
     try {
       await AsyncStorage.setItem(section, JSON.stringify(checklistData));
+      await AsyncStorage.setItem(`${section}_complete`, JSON.stringify(true));
       Alert.alert('Success', 'Section data saved successfully!');
       
     } catch (error) {
